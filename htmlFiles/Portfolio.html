@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alan's Portfolio</title>
+    <link href="/Users/geandryrodriguez/Projects/CodeacademyProd/CodeCss/portfolio.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header>
+        <h1 id="willChange">Alan<span id="willChange">Bleboo</span></h1>
+        <ul>
+            <li>
+                <button name="backgroundButton" type="button" id="Background">About Me</button>
+            </li>
+            <li>
+                <button name="skillsButton" type="button" id="Skills">Skills</button>
+            </li>
+            <li><button name="resumeButton" type="button" id="resumeToggleButton"> Resume</button></li>
+            <li><button name="projectsButton"
+             type="button"
+            id="Projects">Projects</button>
+            </li>
+        </ul>
+            <button id='portfolioMessage' type="button" name="portfolioMessage">Click to Reveal Message!</button>
+    </header>
+
+    <div id="imageAlan">
+        <label id="imageOfAlan">
+            <img name="imageOfAlan" alt="picture of Alan" src="/Users/geandryrodriguez/Projects/CodeacademyProd/Codeimages/Picture_alan.png">
+        </label>
+    </div>
+    <div>
+        <section id="background" class="hidden">
+       <h3 class="background"><span>About Me</span></h3>
+        <p class="background">I was born in Ghana, lived there about 11 years, completed High school in Kingston New York. Graduated from Marist College and now in based in New York city.
+            I enjoy learning new video games and programs, scripting and programming, listening to Music, reading, Tinkering with hardware and software
+        </p>
+    </div>
+
+    <div>
+        <section id="skills" class="hidden">
+            <h3 class="skills"><span>Skills</span></h3>
+            <p class="skills">My skills include: Python, Java, JavaScript, Css, Html, JQuery, Adobe Creative Tools, SQL and MySQL, R</p>
+        </section>
+    </div>
+    
+    <div>
+        <section id="resume" class="hidden">
+            <h3 class="resume"><span>Resume</span></h3>
+            <p class="resume">Here is my Current Resume but it will be updated concurrently</p>
+            <article id="resumePart">
+                <label id="resumePicture"><img src="/Users/geandryrodriguez/Downloads/ModificationOfResumeforWeb.jpg" alt="Alans current resume"></label>
+            </article>
+        </section>
+    </div>
+    <div>
+        <section id="projects" class="hidden">
+            <h3 class="projects">Projects</h3>
+            <ul class="projects">
+                <li class="projects"><a href="/Users/geandryrodriguez/Projects/HtmlFiles/Dogsit.html">Dog sitting page</a></li>
+                <li class="projects"><a href="/Users/geandryrodriguez/Projects/HtmlFiles/Teashop.html">Tea shop page</a></li>
+                <li class="projects"><a href="/Users/geandryrodriguez/Projects/HtmlFiles/Animated.html">Animation Display</a></li>
+            </ul>
+        </section>
+    </div>
+<h3>Contact Information</h3>
+</body>
+<footer class="contact">  
+    <p><img name='emailLogo' class="contact" alt='emailLogo' src='/Users/geandryrodriguez/Projects/CodeacademyProd/Codeimages/emailLogo.avif'>Email: dai345b@gmail.com</p>
+    <p><img name='LinkedIn'class='contact'alt="linkedInLogo" src="/Users/geandryrodriguez/Projects/CodeacademyProd/Codeimages/linkedInPhoto.png">
+        <a class="contact" href="https://www.linkedin.com/in/alan-bleboo-b62b911b7/">LinkedIn: Alan Bleboo </a></p>
+    <p>
+        <img name='Github' class="contact" alt='githubLogo' src="/Users/geandryrodriguez/Projects/CodeacademyProd/Codeimages/gitHubLogo.png">
+        <a class="contact" href="https://github.com/Intropyro1">GitHub: Intropyro1 </a></p>
+</footer>
+<script> 
+    const changeWords = document.getElementById('willChange');
+    const buttonToChange = document.getElementById('portfolioMessage');
+    buttonToChange.addEventListener('click', function(){
+        changeWords.innerHTML = 'Welcome to My Portfolio';
+    })
+
+    
+    const backgroundButton = document.getElementById("Background");
+    const backgroundWords = document.querySelector('section#background')
+    backgroundButton.addEventListener('click', function(){
+      /*  resumeImagePortion.classList.toggle('hidden');
+        resumeWordsPortion.classList.toggle('hidden');
+        hobbiesWords.classList.toggle('hidden');
+        projectsWordPortion.classList.toggle('hidden'); */
+        backgroundWords.classList.toggle('show');
+    });
+    
+    const skillsButton = document.getElementById('Skills');
+    const skillsWords = document.querySelector('section#skills');
+    skillsButton.addEventListener('click', function(){
+        skillsWords.classList.toggle('show');
+       /* backgroundWords.classList.toggle('hidden');
+        resumeImagePortion.classList.toggle('hidden');
+        resumeWordsPortion.classList.toggle('hidden');
+        projectsWordPortion.classList.toggle('hidden'); */
+        
+    });
+    
+    const resumeButton = document.getElementById('resumeToggleButton');
+    const resumeImagePortion = document.querySelector('label#resumePicture img');
+    const resumeWordsPortion = document.querySelector('section#resume');
+    resumeButton.addEventListener('click', function(){
+        resumeImagePortion.classList.toggle('show');
+        resumeWordsPortion.classList.toggle('show');
+       /* backgroundWords.classList.toggle('hidden');
+        projectsWordPortion.classList.toggle('hidden');
+        hobbiesWords.classList.toggle('hidden');*/
+        
+    })
+
+    const projectsButton = document.getElementById('Projects');
+    const projectsWordPortion = document.querySelector('section#projects')
+
+    projectsButton.addEventListener('click', function(){
+        projectsWordPortion.classList.toggle('show');
+        /* resumeImagePortion.classList.toggle('hidden');
+        resumeWordsPortion.classList.toggle('hidden');
+        backgroundWords.classList.toggle('hidden');
+        hobbiesWords.classList.toggle('hidden'); */
+
+    })
+    
+</script>
+</html>
