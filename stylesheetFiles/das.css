@@ -1,0 +1,44 @@
+h1 {
+    font-family: Helvetica;
+    font-size: 100px;
+    font-weight: bold;
+    color: khaki;
+    width: 100%;
+    text-align: center;
+    background-image: url(/Users/geandryrodriguez/Downloads/image1.jpeg);
+}
+h2 {
+    font-family: Helvetica;
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+   
+}
+h3 {
+    color: black;
+}
+a p {
+    font-family: Helvetica;
+    font-weight: bold;
+    color: blue;
+}
+#second  h2 {
+       background-color: mediumspringgreen;
+    }
+#third h2 {
+    background-color: lightcoral;
+    background-origin: content-box;
+}
+#fourth  h2 {
+    background-color: skyblue;
+}
+b {
+    color: blue;
+    font-family: Helvetica;
+    font-weight: bold;
+}
+img {
+    position: relative;
+    left: 0px;
+    border: 2.5px solid black;
+}
