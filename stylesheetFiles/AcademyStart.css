@@ -1,0 +1,26 @@
+li {
+    width: 50%;
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+
+ul {
+    display: inline-flex;
+    list-style-type: none;
+    flex-direction: column;
+    border: solid 5px blue;
+}
+
+li img {
+    width: 266px;
+    height: 150px;
+    margin: 32px;
+    border: solid 2px black;
+}
+
+h1 {
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+}
